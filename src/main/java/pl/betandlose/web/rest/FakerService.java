@@ -1,4 +1,4 @@
-package pl.betandlose.service;
+package pl.betandlose.web.rest;
 
 import com.github.javafaker.Faker;
 import org.json.JSONException;
@@ -11,6 +11,8 @@ import java.util.ArrayList;
 @Service
 public class FakerService {
     private ArrayList<JSONObject> todayGames = new ArrayList<>();
+
+    private ArrayList<JSONObject> leagues = new ArrayList<>();
 
     @Scheduled(fixedRate = 5000)
     public void regenerate() throws JSONException {
