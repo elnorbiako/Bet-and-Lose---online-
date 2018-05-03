@@ -6,10 +6,12 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableWebMvc
 @EnableScheduling
+@EnableSwagger2
 @ComponentScan(basePackages = "pl.betandlose")
 public class AppConfig extends WebMvcConfigurerAdapter {
 

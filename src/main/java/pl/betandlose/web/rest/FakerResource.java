@@ -13,6 +13,8 @@ public class FakerResource {
     FakerService fakerService;
     @Autowired
     FakerCountryService fakerCountryService;
+    @Autowired
+    FakerUserService fakerUserService;
 
     @GetMapping(path= "/hello-world")
     public String helloWorld() {
@@ -27,6 +29,11 @@ public class FakerResource {
     @GetMapping(path= "/fake-countries")
     public String country() {
         return fakerCountryService.getCountries().toString();
+    }
+
+    @GetMapping(path= "/fake-users")
+    public String users() {
+        return fakerUserService.getFakeUsers().toString();
     }
 
 }
